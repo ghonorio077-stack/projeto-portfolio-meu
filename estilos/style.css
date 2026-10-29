@@ -50,3 +50,45 @@ header{
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
+
+
+#ficha {
+    text-align: center; 
+    padding: 20px;
+}
+
+#ficha  img {
+    width: 200px;  
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 5px solid white; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    display: block;
+    margin: 0 auto 20px auto; 
+}
+
+#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  gap: 1em;
+  margin-top: 15px;
+}
+
+#redes-sociais a {
+  color: var(--destaque);
+  transition: color 0.5s;
+}
+
+#redes-sociais a:hover {
+  color: var(--destaque-inverso);
+}
