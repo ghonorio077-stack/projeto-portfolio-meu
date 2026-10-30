@@ -11,7 +11,7 @@
   --texto: #222222;
   --texto-inverso: #ffffff;
   --destaque: #6d502eab;
-  --destaque-inverso: #886609;
+  --destaque-inverso: #b8b09c;
   --fundo-card: #ffffff;
 }
 
@@ -91,4 +91,55 @@ header{
 
 #redes-sociais a:hover {
   color: var(--destaque-inverso);
+}
+
+#detalhes{
+  grid-column: 2;
+}
+
+article{
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+article h2{
+  color: var(--destaque);
+  margin-bottom: 20px ;
+}
+
+#skill-conteiner{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+#skill-conteiner .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skill-conteiner .nome{
+  color: var(--texto);
+  font-weight: bold;
+}
+
+#skill-conteiner .porcent{
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skill-conteiner .barra{
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--destaque-inverso);
+}
+
+#skill-conteiner .progresso{
+  height: 100%;
+  background-color: var(--destaque);
+  border-radius: 4px;
 }
