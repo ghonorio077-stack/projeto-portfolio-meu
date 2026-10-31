@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Gabriel H. Honório da Silva</title>
+    <title>Portfólio Gabriel Henrique</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <script src="https://kit.fontawesome.com/654399e7dd.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="escuro">
     <header>
+        <button id="botao-layout" aria-label="Alternar layout do site" title="Mudar estilo de layout">
+            <i class="fa-solid fa-columns"></i>
+        </button>
         <nav id="menu">
-            <ul>
-                <li><a href="#" class="link"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#" class="link"><i class="fa-solid fa-brain"></i></a></li>
-                <li><a href="#" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
-                <li><a href="#" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
+            <ul> 
+                <li><a href="#ficha" class="link"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
+                <li><a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                <li><a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
+                <li><a href="#" class="link" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="ficha">
-            <img src="imagens/eu.jpeg" alt="">
+            <!-- Certifique-se de que o caminho da sua foto está correto na pasta imagens -->
+            <img src="imagens/eu.jpeg" alt="Gabriel Henrique" class="foto">
             <h1>Gabriel Henrique Honório da Silva</h1>
             <p>Estudante do 9º ano apaixonado por tecnologia e desenvolvimento web. Atualmente me dedicando ao aprendizado da base de Front-end (HTML5, CSS3) e evoluindo em JavaScript e Python para criar soluções práticas e projetos interativos.</p>
-            <div id="redes-sociais">
+            <div id="social">
                 <a href="https://github.com/ghonorio077-stack" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/_.gabrielhonorio/" target="_blank" rel="nofollow"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.tiktok.com/@gh20508" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </section>
 
-        <section class="detalhes">
+        <section id="detalhes">
+
             <article id="skills">
                 <h2><i class="fa-solid fa-brain"></i>Minhas skills</h2>
                 <div id="skill-conteiner">
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                HTML5
-                            </span>
-                            <span class="porcent">
-                                70%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-code"></i> HTML5</span>
+                            <span class="porcent">70%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 70%;"></div>
@@ -52,13 +53,8 @@
                     </div>
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                CSS3
-                            </span>
-                            <span class="porcent">
-                                40%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-code"></i> CSS3</span>
+                            <span class="porcent">40%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 40%;"></div>
@@ -66,13 +62,8 @@
                     </div>
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                JavaScript
-                            </span>
-                            <span class="porcent">
-                                10%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-code"></i> JavaScript</span>
+                            <span class="porcent">10%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 10%;"></div>
@@ -80,13 +71,17 @@
                     </div>
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-person-rays"></i>
-                                Comunicação
-                            </span>
-                            <span class="porcent">
-                                60%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-code"></i> Inteligência Artificial</span>
+                            <span class="porcent">50%</span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-person-rays"></i> Comunicação</span>
+                            <span class="porcent">60%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 60%;"></div>
@@ -94,13 +89,8 @@
                     </div>
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                            <i class="fa-solid fa-person-rays"></i>
-                                Trabalho em Equipe
-                            </span>
-                            <span class="porcent">
-                                75%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-person-rays"></i> Trabalho em Equipe</span>
+                            <span class="porcent">75%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 75%;"></div>
@@ -108,13 +98,8 @@
                     </div>
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                            <i class="fa-solid fa-person-rays"></i>
-                                Adaptabilidade
-                            </span>
-                            <span class="porcent">
-                                55%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-person-rays"></i> Adaptabilidade</span>
+                            <span class="porcent">55%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 55%;"></div>
@@ -122,13 +107,8 @@
                     </div>
                     <div class="item">
                         <div class="info">
-                            <span class="nome">
-                            <i class="fa-solid fa-person-rays"></i>
-                                Esportes
-                            </span>
-                            <span class="porcent">
-                                95%
-                            </span>
+                            <span class="nome"><i class="fa-solid fa-person-rays"></i> Esportes</span>
+                            <span class="porcent">95%</span>
                         </div>
                         <div class="barra">
                             <div class="progresso" style="width: 95%;"></div>
@@ -136,49 +116,48 @@
                     </div>
                 </div>
             </article>
-            <article id="formacao">
 
+            <article id="formacao">
                 <h2><i class="fa-solid fa-graduation-cap"></i>Formação</h2>
                 <div id="formacao-conteiner">
                     <div class="curso">
-                        <p class="periodo">2018-2024</p>
-                        <h3 class="instituicao">Escola CEMMA</h3>
-                        <p class="titulacao">Ensino Fundamental I </p>
-                    </div>
-                
-                    <div class="curso">
-                        <p class="periodo">2025-2026</p>
-                        <h3 class="instituicao">Escola Bom Jesus São José</h3>
-                        <p class="titulacao">Ensino Fundamental II (em andamento)</p>
-                    </div>
-                
-                    <div class="curso">
-                        <p class="periodo">2026</p>
-                        <h3 class="instituicao">Curso Em Vídeo</h3>
-                        <p class="titulacao">HTML5 e CSS3 (Módulo 1 a 5)</p>
+                        <p class="periodo">Ensino Fundamental</p>
+                        <h3 class="instituicao">CEMMA</h3>
+                        <p class="titulacao">Anos anteriores do Fundamental</p>
                     </div>
 
                     <div class="curso">
                         <p class="periodo">2026</p>
-                        <h3 class="instituicao">Curso Em Vídeo</h3>
-                        <p class="titulacao">JavaScript (em andamento)</p>
+                        <h3 class="instituicao">Rede Bom Jesus</h3>
+                        <p class="titulacao">9º Ano (Em andamento)</p>
+                    </div>
+
+                    <div class="curso">
+                        <p class="periodo">2026</p>
+                        <h3 class="instituicao">Curso em Vídeo</h3>
+                        <p class="titulacao">HTML5 e CSS3 (Módulos 1 a 5)</p>
+                    </div>
+
+                    <div class="curso">
+                        <p class="periodo">2026</p>
+                        <h3 class="instituicao">Curso em Vídeo</h3>
+                        <p class="titulacao">JavaScript (Em andamento)</p>
                     </div>
                 </div>
             </article>
             <article id="projetos">
                 <h2><i class="fa-solid fa-trowel-bricks"></i>Meus projetos</h2>
-
                 <div id="projeto-conteiner">
                     <a href="https://ghonorio077-stack.github.io/projeto-login/" target="_blank">
                         <div class="projeto projeto-login">
-                            <img src="imagens/projeto-05-login.jpg" alt="Projeto 1" class="foto">
+                            <img src="imagens/projeto-05-login.jpg" alt="Projeto Login" class="foto">
                             <div class="projeto-info">
                                 <p class="periodo">2026</p>
-                                <h3 class="titulo">Projeto Login</h3>
+                                <h3 class="titulo">Projeto de Login</h3>
                                 <p>Projeto construído para treinar o conhecimento e aprendizado das aulas sobre layout.</p>
                                 <details class="descricao">
                                     <summary>Saiba mais...</summary>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere nemo voluptate culpa ullam, in ducimus quia beatae incidunt praesentium adipisci sunt, molestiae ut, officiis consequuntur soluta repellendus illo voluptatibus quis.</p>
+                                    <p>Detalhes do projeto de login.</p>
                                 </details>
                             </div>
                         </div>
@@ -186,41 +165,42 @@
 
                     <a href="https://ghonorio077-stack.github.io/projeto-cordel/" target="_blank">
                         <div class="projeto projeto-cordel">
-                            <img src="imagens/projeto-02-cordel.jpg" alt="Projeto 2" class="foto">
+                            <img src="imagens/projeto-02-cordel.jpg" alt="Projeto Cordel" class="foto">
                             <div class="projeto-info">
                                 <p class="periodo">2026</p>
                                 <h3 class="titulo">Projeto de Cordel</h3>
                                 <p>Projeto construído para treinar o efeito paralax em imagens.</p>
-                                    <details class="descricao">
-                                        <summary>Saiba mais...</summary>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae porro vero eum minus obcaecati! Illum, magnam quaerat exercitationem dolorem doloribus dolores consectetur ipsa recusandae obcaecati harum quibusdam error consequatur quas.</p>
-                                    </details>
+                                <details class="descricao">
+                                    <summary>Saiba mais...</summary>
+                                    <p>Detalhes do projeto de cordel.</p>
+                                </details>
                             </div>
                         </div>
                     </a>
 
                     <a href="https://ghonorio077-stack.github.io/projeto-android/" target="_blank">
                         <div class="projeto projeto-android">
-                            <img src="imagens/projeto-03-android.jpg" alt="Projeto 3" class="foto">
+                            <img src="imagens/projeto-03-android.jpg" alt="Projeto Android" class="foto">
                             <div class="projeto-info">
-                                <p class="periodo">2024</p>
+                                <p class="periodo">2026</p>
                                 <h3 class="titulo">Projeto Android</h3>
                                 <p>Projeto construído para treinar conteúdos e imagens dinâmicas.</p>
-                                    <details class="descricao">
-                                        <summary>Saiba mais...</summary>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae porro vero eum minus obcaecati! Illum, magnam quaerat exercitationem dolorem doloribus dolores consectetur ipsa recusandae obcaecati harum quibusdam error consequatur quas.</p>
-                                    </details>
+                                <details class="descricao">
+                                    <summary>Saiba mais...</summary>
+                                    <p>Detalhes do projeto android.</p>
+                                </details>
                             </div>
                         </div>
                     </a>
-                    
                 </div>
             </article>
         </section>
     </main>
 
     <footer>
-
+        Portfólio desenvolvido por <strong>Gabriel Henrique Honório Da Silva</strong> &copy; 2026
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

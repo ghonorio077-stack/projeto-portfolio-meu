@@ -38,3 +38,19 @@ navLinks.forEach(link => {
     }
   });
 });
+
+// Botão de Alternar Layout (Estilo Cartão vs Estilo Guanabara)
+const botaoLayout = document.getElementById('botao-layout');
+
+// Verifica se já havia um layout salvo no navegador
+const layoutSalvo = localStorage.getItem('layout');
+if (layoutSalvo === 'guanabara') {
+    body.classList.add('layout-guanabara');
+}
+
+if (botaoLayout) {
+    botaoLayout.addEventListener('click', () => {
+        const isGuanabara = body.classList.toggle('layout-guanabara');
+        localStorage.setItem('layout', isGuanabara ? 'guanabara' : 'padrao');
+    });
+}
