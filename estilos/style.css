@@ -37,14 +37,16 @@ header {
   color: var(--texto-inverso);
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* === BOTÃO DE LAYOUT (Visível apenas em telas grandes) === */
 #botao-layout {
+  display: none; /* Escondido por padrão no celular */
   background: transparent;
   border: none;
   color: var(--texto-inverso);
@@ -184,7 +186,7 @@ article h2 {
   border-radius: 4px;
 }
 
-/* === FORMAÇÃO (Borda lateral com movimento fluido) === */
+/* === FORMAÇÃO === */
 #formacao-conteiner {
   display: flex;
   flex-direction: column-reverse;
@@ -215,7 +217,7 @@ article h2 {
 }
 
 #formacao-conteiner .curso:hover {
-  padding-left: 25px; /* Empurra o conteúdo junto com a borda */
+  padding-left: 25px;
   background: linear-gradient(to right, #96877a22, var(--fundo-principal));
   cursor: pointer;
 }
@@ -234,7 +236,7 @@ article h2 {
   color: var(--destaque-inverso);
 }
 
-/* === PROJETOS (Borda lateral, texto e cor mudando juntos com transition) === */
+/* === PROJETOS === */
 #projeto-conteiner {
   display: flex;
   flex-direction: column-reverse;
@@ -248,13 +250,12 @@ article h2 {
   gap: 15px;
   background-color: var(--fundo-principal);
   padding: 10px;
-  padding-left: 20px; /* Espaço inicial para a borda */
+  padding-left: 20px;
   border-radius: 8px;
   overflow: hidden;
   transition: background-color .5s ease, padding-left .5s ease;
 }
 
-/* A borda esquerda via pseudo-elemento com degradê e bordas arredondadas */
 #projeto-conteiner .projeto::before {
   content: '';
   position: absolute;
@@ -268,7 +269,6 @@ article h2 {
   transition: width .5s ease, background .5s ease;
 }
 
-/* Quando passa o mouse, a borda cresce e o padding empurra o conteúdo */
 #projeto-conteiner .projeto:hover {
   padding-left: 25px;
   cursor: pointer;
@@ -278,14 +278,11 @@ article h2 {
   width: 15px;
 }
 
-/* Transição suave para a cor do título */
 #projeto-conteiner .titulo {
   transition: color 0.5s ease;
 }
 
-/* === HOVER ESPECÍFICO DE CADA PROJETO (Borda e Título) === */
-
-/* Projeto Login */
+/* === HOVER ESPECÍFICO DE CADA PROJETO === */
 #projeto-conteiner .projeto.projeto-login:hover::before {
   background: linear-gradient(to bottom, #9b7fd4, #573391);
 }
@@ -293,7 +290,6 @@ article h2 {
   color: #7b52c0;
 }
 
-/* Projeto Cordel */
 #projeto-conteiner .projeto.projeto-cordel:hover::before {
   background: linear-gradient(to bottom, #d4a373, #bc6c25);
 }
@@ -301,7 +297,6 @@ article h2 {
   color: #bc6c25;
 }
 
-/* Projeto Android */
 #projeto-conteiner .projeto.projeto-android:hover::before {
   background: linear-gradient(to bottom, #50b464, #2d6a4f);
 }
@@ -335,24 +330,39 @@ footer a {
   font-weight: bold;
 }
 
-/* === LAYOUT GUANABARA (Ativado pelo botão no canto superior esquerdo) === */
-body.layout-guanabara main {
-  display: grid;
-  grid-template-columns: auto 300px 1fr auto;
-}
-
-body.layout-guanabara #ficha {
-  grid-column: 2/3;
-  height: fit-content;
-  position: sticky;
-  top: 65px;
-}
-
-body.layout-guanabara #detalhes {
-  grid-column: 3/4;
-}
-
+/* === RESPONSIVIDADE E LAYOUT GUANABARA (Apenas para telas maiores que 768px) === */
 @media screen and (min-width: 768px) {
+
+  header{
+    justify-content: space-between;
+  }
+
+  /* Mostra o botão apenas em telas grandes */
+  #botao-layout {
+    display: block;
+  }
+
+  /* Layout de colunas ativado quando a classe for acionada pelo botão */
+  body.layout-guanabara main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  body.layout-guanabara #ficha {
+    grid-column: 1;
+    height: fit-content;
+    position: sticky;
+    top: 75px;
+  }
+
+  body.layout-guanabara #detalhes {
+    grid-column: 2;
+  }
+
   #skill-conteiner {
     grid-template-columns: 1fr 1fr;
   }
