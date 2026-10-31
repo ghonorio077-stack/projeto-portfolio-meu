@@ -51,7 +51,6 @@ header{
   color: var(--destaque);
 }
 
-
 #ficha {
     text-align: center; 
     padding: 20px;
@@ -109,6 +108,9 @@ article h2{
   margin-bottom: 20px ;
 }
 
+
+
+
 #skill-conteiner{
   display: grid;
   grid-template-columns: 1fr;
@@ -142,4 +144,132 @@ article h2{
   height: 100%;
   background-color: var(--destaque);
   border-radius: 4px;
+}
+
+
+
+
+#formacao-conteiner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#formacao-conteiner .curso{
+  position: relative;
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  padding: 15px 15px 15px 25px; 
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#formacao-conteiner .curso::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--destaque), var(--destaque-inverso));
+  transition: width 0.3s ease;
+}
+
+#formacao-conteiner .curso:hover::before{
+  width: 16px; 
+}
+
+#formacao-conteiner .curso:hover{
+    transform: translateX(8px); 
+    cursor: pointer;
+}
+
+#formacao-conteiner .periodo{
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#formacao-conteiner .instituicao{
+  color: var(--destaque);
+}
+
+
+
+
+#projeto-conteiner{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-conteiner .projeto{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 15px 15px 15px 25px; 
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#projeto-conteiner .projeto:hover{
+  transform: translateX(8px); 
+  cursor: pointer;
+}
+
+
+
+#projeto-conteiner .projeto.projeto-login::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--destaque), var(--destaque-inverso));
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+#projeto-conteiner .projeto.projeto-login:hover::before {
+    width: 16px;
+    background: linear-gradient(to bottom, rgb(126, 80, 200), rgb(90, 155, 180), var(--destaque));
+}
+
+
+
+#projeto-conteiner .projeto.projeto-cordel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--destaque), var(--destaque-inverso));
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+#projeto-conteiner .projeto.projeto-cordel:hover::before {
+  width: 16px;
+  background: linear-gradient(to bottom, rgb(90, 150, 100), var(--destaque)); 
+}
+
+
+
+#projeto-conteiner .projeto.projeto-android::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--destaque), var(--destaque-inverso));
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+#projeto-conteiner .projeto.projeto-android:hover::before {
+    width: 16px;
+    background: linear-gradient(to bottom, rgb(50, 120, 70), rgb(226, 218, 192), var(--destaque));
 }
